@@ -47,9 +47,12 @@ var conversionNumbers = [
 ];
 
 var userInput = document.getElementById('enter-number').value;
+var post = document.getElementById('post-results');
 
 function converter(userInput, rate){
   'use strict';
   var output = rate * userInput;
-  return output;
-};
+  var li = document.createElement('li');
+  li.textContent = output;
+  post.appendChild(li);
+}
