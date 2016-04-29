@@ -60,3 +60,24 @@
   color: blue;
   align-items:center;
 }
+
+header {
+  display: flex;
+
+}
+
+.left-side {
+  float: left;
+  width: 88%;
+}
+
+.right-side {
+  float: right;
+  width: 12%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  border: solid;
+}
