@@ -26,7 +26,7 @@ function buttonHandler(e) {
   var targetEl = e.target;
   e.preventDefault();
 
-  converter( valArray.indexOf(document.getElementById('select-conv').value));
+  converter(document.getElementById('enter-number').value, conversionNumbers[valArray.indexOf(document.getElementById('select-conv').value)]);
   console.log('Calling Conversion function');
 
 };
@@ -52,7 +52,8 @@ var post = document.getElementById('post-results');
 function converter(userInput, rate){
   'use strict';
   var output = rate * userInput;
-  var li = document.createElement('li');
-  li.textContent = output;
-  post.appendChild(li);
+  console.log(userInput + ' ' + rate + ' ' + output);
+  // var li = document.createElement('li');
+  // li.textContent = output;
+  // post.appendChild(li);
 }
