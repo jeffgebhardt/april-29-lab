@@ -27,7 +27,6 @@ function buttonHandler(e) {
   e.preventDefault();
 
   converter(document.getElementById('enter-number').value, conversionNumbers[valArray.indexOf(document.getElementById('select-conv').value)]);
-  console.log('Calling Conversion function');
 
 };
 
@@ -43,7 +42,7 @@ var conversionNumbers = [
   .455, // pounds to kg
   2.2, // kg to pounds
   0.907185,//std shit tone
-  1.10231,//metric shit ton
+  1.10231//metric shit ton
 ];
 
 var userInput = document.getElementById('enter-number').value;
@@ -51,9 +50,10 @@ var post = document.getElementById('post-results');
 
 function converter(userInput, rate){
   'use strict';
+  console.log('rate: ' + rate + 'user Input :' + userInput);
   var output = rate * userInput;
   console.log(userInput + ' ' + rate + ' ' + output);
-  // var li = document.createElement('li');
-  // li.textContent = output;
-  // post.appendChild(li);
+  var li = document.createElement('li');
+  li.textContent = output;
+  post.appendChild(li);
 }
