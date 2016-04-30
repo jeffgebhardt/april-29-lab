@@ -48,9 +48,10 @@ var conversionNumbers = [
 var userInput = document.getElementById('enter-number').value;
 var post = document.getElementById('post-results');
 
-function converter(userInput, rate){
+function converter(userInput, rateIndex){
   'use strict';
   console.log('rate: ' + rate + 'user Input :' + userInput);
+
   var output = rate * userInput;
   console.log(userInput + ' ' + rate + ' ' + output);
   var li = document.createElement('li');
