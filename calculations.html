@@ -4,34 +4,39 @@
 
     <title>Conversion Calculator</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculations.css">
 
   </head>
   <body>
     <div class="container">
       <h1>Conversion Calculator</h1>
       <form  id = "conv-calc" action="index.html" method="post">
-        <fieldset id = field-conv-calc>
+        <fieldset id = "field-conv-calc">
           <label for="enter-number">Enter a measurement</label>
-          <input type="text" id= "enter-number">
+          <input class="input" type="text" id= "enter-number">
           <label for="select-conv"></label>
-          <select id="select-conv" name="selectConv">
+          <select class="input" id="select-conv" name="selectConv">
             <option value="inches">Inches to centimeters</option>
             <option value="centimeters">Centimeters to inches</option>
             <option value="ounces">Fluid ounces to milliliters</option>
             <option value="milliliters">Milliliters to fluid ounces</option>
             <option value="miles">Miles to kilometers</option>
             <option value="pounds">Pounds to kilograms</option>
-            <option value="kkilograms">Kilograms to pounds</option>
-            <option value="standard">Standard shit-ton to metric shit-ton</option>
-            <option value="inches">Metric shit-ton to standard shit-ton</option>
+            <option value="kilograms">Kilograms to pounds</option>
+            <option value="standard shit-ton">Standard shit-ton to metric shit-ton</option>
+            <option value="metric shit-ton">Metric shit-ton to standard shit-ton</option>
           </select>
 
-          <button type="button" id="convert-button" name= "convButton">Convert</button>
-          <button type="button" id="clear-conv" name="clearButton">Clear</button>
+          <button class="button" type="button" id="convert-button" name= "convButton">Convert</button>
+          <button class="button" type="button" id="clear-conv" name="clearButton">Clear</button>
         </fieldset>
       </form>
     </div>
-    <script src="js/app.js"></script>
+    <div class="">
+      <ul id="post-results">
+
+      </ul>
+    </div>
+    <script src="js/calculations.js"></script>
   </body>
 </html>
