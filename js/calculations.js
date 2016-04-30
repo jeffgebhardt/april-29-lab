@@ -64,10 +64,12 @@ function converter(userInput, rateIndex){
 
   //1 inch equals 2.540 centimeters"
   var myPluralEnding = rateIndex === 0 ? 2 : 1; // drop two characters for convertFrom Units if rateIndex is 0 (inches)
+  console.log('convert from: ' + myPluralEnding);
   var convertFromString = userInput <= 1 ? valArray[rateIndex].substr(0, valArray[rateIndex].length - myPluralEnding) : valArray[rateIndex];
 
-  myPluralEnding = rateIndex % 2 === 0 ? rateIndex + 1 : rateIndex - 1 === 0 ? 2 : 1; //drop 2 characters from convertTo Units if conerting to previous item in array
-  var convertToString = output <= 1 ? valArray[(rateIndex % 2 === 0) ? rateIndex + 1 : rateIndex - 1].substr(0, valArray[(rateIndex % 2 === 0) ? rateIndex + 1 : rateIndex - 1].length - myPluralEnding) : valArray[rateIndex];
+  myPluralEnding = (rateIndex % 2 === 0 ? rateIndex + 1 : rateIndex - 1) === 0 ? 2 : 1;
+  console.log('convert to: ' + myPluralEnding);//drop 2 characters from convertTo Units if conerting to previous item in array
+  var convertToString = output <= 1 ? valArray[(rateIndex % 2 === 0) ? rateIndex + 1 : rateIndex - 1].substr(0, valArray[(rateIndex % 2 === 0) ? rateIndex + 1 : rateIndex - 1].length - myPluralEnding) : valArray[(rateIndex % 2 === 0) ? rateIndex + 1 : rateIndex - 1];
 
   li.textContent = userInput + ' ' + convertFromString + ' equals ' + output.toFixed(3) + ' ' + convertToString;
   post.appendChild(li);
